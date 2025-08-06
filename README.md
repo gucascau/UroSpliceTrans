@@ -1,6 +1,8 @@
 # UroSpliceTrans
 UroSpliceTrans is a bioinformatics pipeline designed to translate alternative splicing events into predicted urinary peptide sequences. By integrating exon-level splicing information with genomic sequences, UroSpliceTrans reconstructs transcript isoforms, identifies open reading frames (ORFs), and generates corresponding peptide sequences that reflect splicing-specific alterations. This tool enables researchers to connect transcriptomic splicing changes to the urinary peptidome, facilitating the discovery of novel biomarkers and providing mechanistic insights into splicing-driven disease processes.
 
+<img src="figs/UroSplicingTransfer.png" width="1500"/>
+
 # Availability 
 1. Splice-Aware Isoform Reconstruction based on user-defined exon combinations.
 2. Genomic Sequence Extraction for accurate exon retrieval.
