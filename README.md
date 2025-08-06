@@ -36,7 +36,7 @@ Human urinary peptides were aligned against this database using BLASTP, optimize
 The search parameters included a high e-value threshold and small word size to capture short peptide matches.  
 **4. Filtering and Hit Selection:**
 BLAST alignments were filtered based on percentage identity (≥90%), minimum alignment length (≥6 amino acids), and stringent e-value thresholds (≤1e-3).
-The filtered high-confidence peptide matches were compiled for downstream analysis. 
+The filtered high-confidence peptide matches were compiled for downstream analysis.    
 **5. Detection of urinary peptides as biomarkers for diseae specific splicing alternations:**
 Differentially expressed urinary peptides from disease cohorts were cross-referenced with the filtered high-confidence splicing-derived peptide matches. This integrative approach aims to identify urinary peptides that reflect disease-specific splicing alterations. Notably, we have developed a robust urinary proteomic analysis pipeline (PUVUrinaryProteomic) optimized for differential expression analysis of the urine proteome in boys with Posterior Urethral Valves (PUV), which will be leveraged to enhance biomarker discovery in this context.
 
