@@ -15,7 +15,7 @@ UroSpliceTrans is a bioinformatics pipeline designed to translate alternative sp
 
 . bedtools (bedtools-2.25.0) (https://bedtools.readthedocs.io/en/latest/)
 
-. R packages: BSgenome.Hsapiens.UCSC.hg38, Biostrings, GenomicRanges
+. R packages: BSgenome.Mmusculus.UCSC.mm10, Biostrings, GenomicRanges, dplyr, readr
 
 # Install
 
