@@ -43,16 +43,16 @@ Rscript Src/parse_blast_results.R # Run R script to filter results
 # Workflow Overview
 **1. Generation of Mouse Splicing-Derived Peptides:**
 Alternative splicing events were translated into peptide sequences using the UroSpliceTrans pipeline.
-The resulting peptide sequences were compiled into a FASTA file representing the mouse splicing-derived peptidome.
+The resulting peptide sequences were compiled into a FASTA file representing the mouse splicing-derived peptidome.  
 **2. Human Urinary Peptide Dataset Preparation:**
-Human urinary peptides identified from mass spectrometry were curated and formatted as a FASTA query file.
+Human urinary peptides identified from mass spectrometry were curated and formatted as a FASTA query file.  
 **3. BLASTP Search (Peptide-to-Peptide Alignment):**
 A BLAST protein database was created from the mouse splice-derived peptides.
 Human urinary peptides were aligned against this database using BLASTP, optimized for short peptide alignments.
-The search parameters included a high e-value threshold and small word size to capture short peptide matches.
+The search parameters included a high e-value threshold and small word size to capture short peptide matches.  
 **4. Filtering and Hit Selection:**
 BLAST alignments were filtered based on percentage identity (≥90%), minimum alignment length (≥6 amino acids), and stringent e-value thresholds (≤1e-3).
-The filtered high-confidence peptide matches were compiled for downstream analysis.
+The filtered high-confidence peptide matches were compiled for downstream analysis.  
 
 # Contact
 
