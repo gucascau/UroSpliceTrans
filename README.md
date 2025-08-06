@@ -24,6 +24,22 @@ UroSpliceTrans is a bioinformatics pipeline designed to translate alternative sp
     git clone https://github.com/gucascau/UroSpliceTrans.git
 ```   
 
+# Workflow Overview
+**1. Generation of Mouse Splicing-Derived Peptides:**
+Alternative splicing events were translated into peptide sequences using the UroSpliceTrans pipeline.
+The resulting peptide sequences were compiled into a FASTA file representing the mouse splicing-derived peptidome.  
+**2. Human Urinary Peptide Dataset Preparation:**
+Human urinary peptides identified from mass spectrometry were curated and formatted as a FASTA query file.  
+**3. BLASTP Search (Peptide-to-Peptide Alignment):**
+A BLAST protein database was created from the mouse splice-derived peptides.
+Human urinary peptides were aligned against this database using BLASTP, optimized for short peptide alignments.
+The search parameters included a high e-value threshold and small word size to capture short peptide matches.  
+**4. Filtering and Hit Selection:**
+BLAST alignments were filtered based on percentage identity (≥90%), minimum alignment length (≥6 amino acids), and stringent e-value thresholds (≤1e-3).
+The filtered high-confidence peptide matches were compiled for downstream analysis. 
+**5. Detection of urinary peptides as biomarkers for diseae specific splicing alternations:**
+Differentially expressed urinary peptides from disease cohorts were cross-referenced with the filtered high-confidence splicing-derived peptide matches. This integrative approach aims to identify urinary peptides that reflect disease-specific splicing alterations. Notably, we have developed a robust urinary proteomic analysis pipeline (PUVUrinaryProteomic) optimized for differential expression analysis of the urine proteome in boys with Posterior Urethral Valves (PUV), which will be leveraged to enhance biomarker discovery in this context.
+
 # Usage
 
 ### 1. Splice-Aware Isoform Reconstruction by rMATS-turbo. 
@@ -39,20 +55,8 @@ bash Src/run_blast.sh # Run Shell BLAST script
 
 Rscript Src/parse_blast_results.R # Run R script to filter results
 ```
+### 4. Define Urinary peptide biomarkers of disease specific splicing alternations
 
-# Workflow Overview
-**1. Generation of Mouse Splicing-Derived Peptides:**
-Alternative splicing events were translated into peptide sequences using the UroSpliceTrans pipeline.
-The resulting peptide sequences were compiled into a FASTA file representing the mouse splicing-derived peptidome.  
-**2. Human Urinary Peptide Dataset Preparation:**
-Human urinary peptides identified from mass spectrometry were curated and formatted as a FASTA query file.  
-**3. BLASTP Search (Peptide-to-Peptide Alignment):**
-A BLAST protein database was created from the mouse splice-derived peptides.
-Human urinary peptides were aligned against this database using BLASTP, optimized for short peptide alignments.
-The search parameters included a high e-value threshold and small word size to capture short peptide matches.  
-**4. Filtering and Hit Selection:**
-BLAST alignments were filtered based on percentage identity (≥90%), minimum alignment length (≥6 amino acids), and stringent e-value thresholds (≤1e-3).
-The filtered high-confidence peptide matches were compiled for downstream analysis.  
 
 # Contact
 
